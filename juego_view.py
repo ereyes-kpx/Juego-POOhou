@@ -82,7 +82,7 @@ class GameView:
             return False
         try:
             self.canvas.move(cid, dx, dy)
-            # bbox check and removal if out
+            # verificar hitbox
             bbox = self.canvas.bbox(cid)
             if bbox and bbox[1] > self.HEIGHT + 100:
                 self.canvas.delete(cid)
